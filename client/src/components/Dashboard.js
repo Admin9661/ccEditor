@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Container, Button, Typography, Grid, Card, CardContent, CardActions, IconButton, TextField } from '@mui/material';
@@ -67,10 +67,10 @@ const Dashboard = () => {
 
     return (
         <Container maxWidth="md">
-            <Typography variant="h4" component="h1" gutterBottom sx={{ mt: 4, mb: 2 }}>
+            <Typography variant="h4" sx={{ mt: 4, mb: 2 }}>
                 Dashboard
             </Typography>
-            <Button variant="contained" color="primary" onClick={createDocument} sx={{ mb: 4, mr: 2 }}>
+            <Button variant="contained" onClick={createDocument} sx={{ mb: 4, mr: 2 }}>
                 Create New Document
             </Button>
             <TextField

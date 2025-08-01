@@ -13,14 +13,14 @@ const VersionSchema = new mongoose.Schema({
 });
 
 const DocumentSchema = new mongoose.Schema({
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     content: {
         type: String,
         default: ''
-    },
-    owner: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User', 
-        required: true
     },
     history: [VersionSchema]
 });

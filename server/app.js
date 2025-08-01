@@ -35,15 +35,7 @@ io.on('connection', (socket) => {
     socket.on('join-document', ({ documentId, username }) => {
         socket.join(documentId);
         socket.documentId = documentId; 
-        socket.username = username;   
-
-        if (!activeUsers.has(documentId)) {
-            activeUsers.set(documentId, new Set());
-        }
-        activeUsers.get(documentId).add(username);
-
-        io.to(documentId).emit('active-users-update', Array.from(activeUsers.get(documentId)));
-        console.log(`Client ${username} joined document: ${documentId}`);
+        socket.username = username;
     });
 
     socket.on('code-change', (data) => {

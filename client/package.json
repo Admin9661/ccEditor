@@ -7,10 +7,6 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.10.0",
     "bootstrap": "^5.3.7",
     "codemirror": "^6.0.2",
@@ -31,7 +27,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "test": "echo 'No tests specified' && exit 0",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

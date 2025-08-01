@@ -122,7 +122,7 @@ const Editor = () => {
     return (
         <Container disableGutters maxWidth={false} sx={{ height: 'calc(100vh - 64px)', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                <Typography variant="h4" component="h1">
+                <Typography variant="h4">
                     Editor - Document ID: {id}
                 </Typography>
                 <Button 

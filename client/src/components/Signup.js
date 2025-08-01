@@ -3,9 +3,6 @@ import axios from 'axios';
 import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, Snackbar, Alert } from '@mui/material';
 
-const SnackbarAlert = React.forwardRef(function SnackbarAlert(props, ref) {
-    return <Alert elevation={6} ref={ref} variant="filled" {...props} />;
-});
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -63,7 +60,7 @@ const Signup = () => {
                     alignItems: 'center',
                 }}
             >
-                <Typography component="h1" variant="h5">
+                <Typography variant="h5">
                     Sign Up
                 </Typography>
                 <Box component="form" onSubmit={onSubmit} sx={{ mt: 1 }}>
@@ -74,7 +71,6 @@ const Signup = () => {
                         id="username"
                         label="Username"
                         name="username"
-                        autoComplete="username"
                         autoFocus
                         value={username}
                         onChange={onChange}
@@ -87,7 +83,6 @@ const Signup = () => {
                         label="Password"
                         type="password"
                         id="password"
-                        autoComplete="current-password"
                         value={password}
                         onChange={onChange}
                     />
@@ -99,15 +94,15 @@ const Signup = () => {
                     >
                         Sign Up
                     </Button>
-                    <Typography variant="body2" align="center">
+                    <Typography align="center">
                         Already have an account? <RouterLink to="/login">Login</RouterLink>
                     </Typography>
                 </Box>
             </Box>
             <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-                <SnackbarAlert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ width: '100%' }}>
+                <Alert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ width: '100%' }}>
                     {snackbarMessage}
-                </SnackbarAlert>
+                </Alert>
             </Snackbar>
         </Container>
     );

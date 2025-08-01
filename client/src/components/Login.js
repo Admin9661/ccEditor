@@ -47,15 +47,8 @@ const Login = () => {
 
     return (
         <Container component="main" maxWidth="xs">
-            <Box
-                sx={{
-                    marginTop: 8,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                <Typography component="h1" variant="h5">
+            <Box sx={{ marginTop: 8, display: 'flex',flexDirection: 'column', alignItems: 'center',}} >
+                <Typography variant="h5">
                     Login
                 </Typography>
                 <Box component="form" onSubmit={onSubmit} sx={{ mt: 1 }}>
@@ -66,7 +59,6 @@ const Login = () => {
                         id="username"
                         label="Username"
                         name="username"
-                        autoComplete="username"
                         autoFocus
                         value={username}
                         onChange={onChange}
@@ -79,7 +71,6 @@ const Login = () => {
                         label="Password"
                         type="password"
                         id="password"
-                        autoComplete="current-password"
                         value={password}
                         onChange={onChange}
                     />
@@ -91,7 +82,7 @@ const Login = () => {
                     >
                         Login
                     </Button>
-                    <Typography variant="body2" align="center">
+                    <Typography align="center">
                         Don't have an account? <RouterLink to="/signup">Sign Up</RouterLink>
                     </Typography>
                 </Box>

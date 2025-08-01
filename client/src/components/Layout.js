@@ -16,18 +16,18 @@ const Layout = ({ children }) => {
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h6" component={RouterLink} to="/" sx={{ flexGrow: 1, color: 'inherit', textDecoration: 'none' }}>
+                    <Typography variant="h6" component={RouterLink} to='/' sx={{ flexGrow: 1, color: 'inherit', textDecoration: 'none' }}>
                         CodeCollab
                     </Typography>
                     {token ? (
                         <>
-                            <Button color="inherit" component={RouterLink} to="/dashboard">Dashboard</Button>
-                            <Button color="inherit" onClick={handleLogout}>Logout</Button>
+                            <Button color="#ffffff" component={RouterLink} to="/dashboard">Dashboard</Button>
+                            <Button color="#ffffff" onClick={handleLogout}>Logout</Button>
                         </>
                     ) : (
                         <>
-                            <Button color="inherit" component={RouterLink} to="/login">Login</Button>
-                            <Button color="inherit" component={RouterLink} to="/signup">Sign Up</Button>
+                            <Button color="#ffffff" component={RouterLink} to="/login">Login</Button>
+                            <Button color="#ffffff" component={RouterLink} to="/signup">Sign Up</Button>
                         </>
                     )}
                 </Toolbar>
